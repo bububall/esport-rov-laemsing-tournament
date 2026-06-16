@@ -1563,7 +1563,7 @@
       <div class="sub">กรอกชื่อทีมที่คุณสังกัด ระบบจะตรวจสอบว่ามีทีมนี้อยู่หรือไม่</div>
 
       <label>ชื่อทีม</label>
-      <input id="hasteam-teamname" type="text" placeholder="เช่น ดราก้อนสไตรค์">
+      <input id="hasteam-teamname" type="text" placeholder="เช่น Leamsing_TH">
       <button class="btn" onclick="verifyTeamName()">ตรวจสอบทีม</button>
       <div class="error-text" id="hasteam-team-error"></div>
     </div>
@@ -1645,7 +1645,7 @@
       </div>
 
       <label>ชื่อเล่น / Nickname (แสดงในการ์ด)</label>
-      <input id="my-nickname" type="text" placeholder="เช่น Shadow">
+      <input id="my-nickname" type="text" placeholder="เช่น bububall">
 
       <label>แนะนำตัวสั้นๆ</label>
       <textarea id="my-bio" placeholder="เช่น Main Jungle ชอบ gank ต้นเกม..."></textarea>
@@ -1671,9 +1671,9 @@
       <h2>ลงชื่อสมาชิก</h2>
       <div class="sub">หัวหน้าทีมสามารถลงทะเบียนสมาชิกในทีมได้โดยตรง ไม่ต้องรอแอดมินเพิ่มรายชื่อ</div>
       <label>ชื่อ-นามสกุลสมาชิก</label>
-      <input id="captain-member-name" type="text" placeholder="เช่น สมชาย ใจดี">
+      <input id="captain-member-name" type="text" placeholder="เช่น วัชรากร อวดราภ">
       <label>ชื่อในเกม / ไอดีเกม</label>
-      <input id="captain-member-gameid" type="text" placeholder="เช่น ShadowBlade_TH">
+      <input id="captain-member-gameid" type="text" placeholder="เช่น Laemsing_TH">
       <label>เบอร์โทรติดต่อ</label>
       <input id="captain-member-contact" type="text" placeholder="เช่น 081-234-5678">
       <button class="btn" onclick="captainAddMember()">ลงทะเบียนสมาชิก</button>
@@ -2491,7 +2491,7 @@ function renderTeamStatusAdmin(){
         ${isComplete
           ? 'color:var(--success);background:color-mix(in srgb,var(--success) 14%,transparent);border:1px solid color-mix(in srgb,var(--success) 40%,transparent)'
           : 'color:var(--danger);background:color-mix(in srgb,var(--danger) 12%,transparent);border:1px solid color-mix(in srgb,var(--danger) 35%,transparent)'}
-      ">${isComplete ? 'ครบแล้ว' : 'ยังไม่ครบ'}</span>
+      ">${isComplete ? 'สมาชิกลงทะเบียนครบแล้ว' : 'สมาชิกยังลงทะเบียนไม่ครบ'}</span>
       <button class="btn btn-sm ${isComplete ? 'secondary' : ''}" style="margin-top:0;min-width:90px"
         onclick="toggleTeamStatus('${team.replace(/'/g,"\\'")}')">
         ${isComplete ? 'ทำเครื่องหมายไม่ครบ' : 'ทำเครื่องหมายครบ'}
