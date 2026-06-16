@@ -3366,8 +3366,8 @@ function renderTeamsList(){
     const captainInfo = captain ? ` • ${captain.name}` : '';
     const complete = isTeamComplete(team);
     const statusHtml = complete
-      ? `<span style="color:var(--success);font-weight:600">(สมาชิกครบแล้ว)</span>`
-      : `<span style="color:var(--danger);font-weight:600">(สมาชิกยังไม่ครบ)</span>`;
+      ? `<span style="color:var(--success);font-weight:600">(สมาชิกลงทะเบียนครบแล้ว)</span>`
+      : `<span style="color:var(--danger);font-weight:600">(สมาชิกยังลงทะเบียนไม่ครบ)</span>`;
     return `
       <li class="team-list-card" onclick="openTeamDetail('${team.replace(/'/g,"\\'")}')">
         ${logoHtml}
