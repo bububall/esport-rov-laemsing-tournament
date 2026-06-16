@@ -1545,18 +1545,13 @@
 
       <div class="home-choice-grid" style="margin-top:14px;margin-bottom:4px">
         <button class="home-choice-btn primary" onclick="showSignupForm(true)">
-          <span class="hc-icon" style="background:linear-gradient(135deg,var(--purple),color-mix(in srgb,var(--purple) 55%,#1a1035))">✅</span>
-          <span>
             <div class="hc-title">มีทีมแล้ว</div>
             <div class="hc-sub">ถูกเพิ่มชื่อในระบบโดยแอดมินแล้ว</div>
           </span>
         </button>
         <button class="home-choice-btn alt" onclick="showSignupForm(false)">
-          <span class="hc-icon" style="background:linear-gradient(135deg,var(--teal),color-mix(in srgb,var(--teal) 55%,#06302b))">📋</span>
-          <span>
             <div class="hc-title">ยังไม่มีทีม</div>
             <div class="hc-sub">ลงสมัครทีมใหม่เลย</div>
-          </span>
         </button>
       </div>
     </div>
@@ -1580,10 +1575,10 @@
       <div class="sub">กรอกข้อมูลของคุณ หัวหน้าทีมจะต้องอนุมัติก่อนจึงจะเข้าใช้งานได้</div>
 
       <label>ชื่อ-นามสกุลจริง</label>
-      <input id="joinreq-name" type="text" placeholder="เช่น สมชาย ใจดี">
+      <input id="joinreq-name" type="text" placeholder="เช่น วัชรากร อวดราภ">
 
       <label>ชื่อในเกม / ไอดีเกม</label>
-      <input id="joinreq-gameid" type="text" placeholder="เช่น ShadowBlade_TH">
+      <input id="joinreq-gameid" type="text" placeholder="เช่น Laemsing_TH">
 
       <label>เบอร์โทรติดต่อ</label>
       <input id="joinreq-contact" type="text" placeholder="เช่น 081-234-5678">
@@ -1600,16 +1595,15 @@
       <div class="sub">กรอกชื่อ ชื่อทีม และเลือกสถานะของคุณในทีม ระบบจะเพิ่มชื่อคุณเข้ารายชื่อผู้เข้าแข่งขันให้อัตโนมัติ</div>
 
       <label>ชื่อ-นามสกุลจริง</label>
-      <input id="signup-name" type="text" placeholder="เช่น สมชาย ใจดี">
+      <input id="signup-name" type="text" placeholder="เช่น วัชรากร อวดราภ">
 
       <label>ชื่อทีม</label>
-      <input id="signup-team" type="text" placeholder="เช่น ดราก้อนสไตรค์">
+      <input id="signup-team" type="text" placeholder="เช่น Admin Laemsing">
 
       <label>สถานะในทีม</label>
       <div class="role-choice-grid" id="signup-role-grid">
         <label class="role-choice checked">
           <input type="radio" name="signup-role" value="captain" checked>
-          <span class="rc-icon">👑</span>
           หัวหน้าทีม
         </label>
         <label class="role-choice">
@@ -1662,7 +1656,7 @@
 
     <!-- Change role (all registered users) -->
     <div class="card" id="myteam-role-card" style="display:none">
-      <span class="pill">⚔️ ตำแหน่งของฉัน</span>
+      <span class="pill">ตำแหน่งของฉัน</span>
       <h2>เปลี่ยนตำแหน่ง</h2>
       <div class="sub">เลือกตำแหน่งที่คุณถนัดในทีม</div>
       <label>ตำแหน่ง</label>
@@ -2673,8 +2667,8 @@ function renderCaptainJoinRequests(){
         ไอดีเกม ${req.gameid} &nbsp;|&nbsp; เบอร์โทร ${req.contact}
       </div>
       <div style="display:flex;gap:8px;">
-        <button class="btn btn-sm" style="margin-top:0;flex:1" onclick="approveJoinRequest(${idx})">✅ อนุมัติ</button>
-        <button class="btn btn-sm danger-btn" style="margin-top:0;flex:1" onclick="rejectJoinRequest(${idx})">❌ ปฏิเสธ</button>
+        <button class="btn btn-sm" style="margin-top:0;flex:1" onclick="approveJoinRequest(${idx})">อนุมัติ</button>
+        <button class="btn btn-sm danger-btn" style="margin-top:0;flex:1" onclick="rejectJoinRequest(${idx})">ปฏิเสธ</button>
       </div>`;
     list.appendChild(row);
   });
