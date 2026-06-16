@@ -1495,15 +1495,11 @@
 
       <div class="home-choice-grid">
         <button class="home-choice-btn primary" onclick="switchTab('register')">
-          <span class="hc-icon">🔑</span>
-          <span>
             <div class="hc-title">เข้าสู่ระบบ</div>
             <div class="hc-sub">สำหรับผู้ที่ลงสมัครทีมไว้แล้ว</div>
           </span>
         </button>
         <button class="home-choice-btn alt" onclick="switchTab('signup')">
-          <span class="hc-icon">📝</span>
-          <span>
             <div class="hc-title">ลงสมัคร</div>
             <div class="hc-sub">สำหรับผู้ที่ยังไม่ลงสมัครทีม</div>
           </span>
@@ -1521,10 +1517,10 @@
       <div class="sub" id="reg-sub">กรอกข้อมูลให้ครบทั้ง 3 ช่อง ระบบจะตรวจสอบและพาไปยังทีมของคุณโดยอัตโนมัติ</div>
 
       <label id="reg-label-name">ชื่อ-นามสกุลจริง</label>
-      <input id="reg-name" type="text" placeholder="เช่น สมชาย ใจดี">
+      <input id="reg-name" type="text" placeholder="เช่น วัรากร อวดราภ">
 
       <label id="reg-label-gameid">ชื่อในเกม / ไอดีเกม</label>
-      <input id="reg-gameid" type="text" placeholder="เช่น ShadowBlade_TH">
+      <input id="reg-gameid" type="text" placeholder="เช่น Laemsing_TH">
 
       <label id="reg-label-contact">เบอร์โทรติดต่อ</label>
       <input id="reg-contact" type="text" placeholder="เช่น 081-234-5678">
@@ -1618,7 +1614,6 @@
         </label>
         <label class="role-choice">
           <input type="radio" name="signup-role" value="member">
-          <span class="rc-icon">🎮</span>
           สมาชิกทีม
         </label>
       </div>
@@ -2675,7 +2670,7 @@ function renderCaptainJoinRequests(){
     row.innerHTML=`
       <div style="font-weight:700;font-size:14px;margin-bottom:2px">${req.name}</div>
       <div style="font-size:12px;color:var(--muted);margin-bottom:8px">
-        🎮 ${req.gameid} &nbsp;|&nbsp; 📞 ${req.contact}
+        ไอดีเกม ${req.gameid} &nbsp;|&nbsp; เบอร์โทร ${req.contact}
       </div>
       <div style="display:flex;gap:8px;">
         <button class="btn btn-sm" style="margin-top:0;flex:1" onclick="approveJoinRequest(${idx})">✅ อนุมัติ</button>
@@ -2869,7 +2864,7 @@ function renderMyTeam(){
     ${tStatus==='complete'
       ? 'color:var(--success);background:color-mix(in srgb,var(--success) 14%,transparent);border:1px solid color-mix(in srgb,var(--success) 40%,transparent)'
       : 'color:var(--danger);background:color-mix(in srgb,var(--danger) 12%,transparent);border:1px solid color-mix(in srgb,var(--danger) 35%,transparent)'}
-  ">${tStatus==='complete' ? 'สมาชิกครบแล้ว' : 'สมาชิกยังไม่ครบ'}</div>`;
+  ">${tStatus==='complete' ? 'สมาชิกลงทะเบียนครบแล้ว' : 'สมาชิกยังลงทะเบียนไม่ครบ'}</div>`;
 
   let captainBadge = currentUser.isCaptain
     ? `<span class="captain-tag">${CROWN_ICON} หัวหน้าทีม</span> ` : '';
